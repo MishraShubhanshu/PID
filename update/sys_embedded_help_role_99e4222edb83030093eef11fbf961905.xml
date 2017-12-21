@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_178530_pid.project_user" name="x_178530_pid.project_user">55e4222edb83030093eef11fbf961903</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-18 11:47:28</sys_created_on>
+        <sys_id>99e4222edb83030093eef11fbf961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>55e4222edb83030093eef11fbf961903</sys_name>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_embedded_help_role_99e4222edb83030093eef11fbf961905</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-18 11:47:28</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

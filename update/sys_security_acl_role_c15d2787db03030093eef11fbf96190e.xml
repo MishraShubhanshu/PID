@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-20 06:20:53</sys_created_on>
+        <sys_id>c15d2787db03030093eef11fbf96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_178530_pid_project_type.x_178530_pid.project_type_user</sys_name>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_security_acl display_value="x_178530_pid_project_type">895d2787db03030093eef11fbf96190b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_c15d2787db03030093eef11fbf96190e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-20 06:20:53</sys_updated_on>
+        <sys_user_role display_value="x_178530_pid.project_type_user" name="x_178530_pid.project_type_user">fc5de387db03030093eef11fbf9619f4</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

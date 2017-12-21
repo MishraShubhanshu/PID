@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Site" max_length="40" name="x_178530_pid_site" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="200" name="u_city_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Country" max_length="100" name="u_country_8" type="string"/>
+        <element default="true" label="Is Active" max_length="40" name="u_is_active_3" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Market" max_length="100" name="u_market_7" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Physical Address 2" max_length="1000" name="u_physical_address2_12" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Postal Code" max_length="40" name="u_postal_code_9" type="string"/>
+        <element label="Property Type" max_length="32" name="u_property_type_11" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="Region" max_length="32" name="u_region_10" reference="x_178530_pid_region" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Site Code" mandatory="true" max_length="20" name="u_site_code_2" type="string"/>
+        <element label="Site ID" mandatory="true" max_length="40" name="u_site_id_1" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="State" mandatory="true" max_length="100" name="u_state_6" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Physical address" mandatory="true" max_length="2000" name="u_string_4" type="string"/>
+        <index name="index">
+            <element name="u_region_10"/>
+        </index>
+        <index name="index2">
+            <element name="u_property_type_11"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Region" max_length="40" name="x_178530_pid_region" type="collection">
+        <element label="Region ID" max_length="40" name="region_id" type="integer"/>
+        <element label="Region Name" max_length="40" name="region_name" type="string"/>
+    </element>
+</database>
