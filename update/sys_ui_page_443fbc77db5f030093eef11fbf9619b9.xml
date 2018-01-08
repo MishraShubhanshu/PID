@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function PID_dateFormater(dateObject) {
+	var d = new Date(dateObject);
+	var day = d.getDate();
+	var month = d.getMonth() + 1;
+	var year = d.getFullYear();
+	if (day < 10) {
+		day = "0" + day;
+	}
+	if (month < 10) {
+		month = "0" + month;
+	}
+	var date = day + "/" + month + "/" + year;
+
+	return date;
+}]]></client_script>
+        <description>This is a custom form for Project table in which we will have all the</description>
+        <direct>false</direct>
+        <endpoint>x_178530_pid_Project Custom Form.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <div class="form-horizontal" ng-app="PIDApp" ng-controller="PIDFormCtrl">
+        <div id="x_178530_pid_project.form_header" class="section_header_div_no_scroll form_title" data-form-title="Project">
+
+            <span class="tabs2_section tabs2_section_0 tabs2_section0 " data-header-only="true" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
+                <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="true" class="section ">
+                    <nav class="navbar navbar-default section_zero" data-type="section_head" data-id="9d98222edb83030093eef11fbf9619df">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <h2 class="form_header navbar-title">Custom Form</h2>
+                            </div>
+                            <div class="navbar-right">
+                                <span id="section_head_right.9d98222edb83030093eef11fbf9619df" style="display: ;">
+                                    <button onclick="saveAttachment('x_178530_pid_project', 'b72dec88db27430093eef11fbf961961');" id="header_add_attachment" title="Manage Attachments" aria-label="Manage Attachments" class="btn btn-icon icon-paperclip navbar-btn" data-original-title="Manage Attachments"></button>
+
+                                    <span class="ui_action_container_primary">
+                                        <span class="navbar_ui_actions">
+                                            <button class="form_action_button header  action_context btn btn-default" style="white-space: nowrap" type="submit" value="sysverb_insert" onclick="return gsftSubmit(this);" id="sysverb_insert" data-action-name="sysverb_insert" gsft_id="42da42d00a0a0b340066377beb6dd099" name="not_important">Submit</button>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </nav>
+                    <script>
+                        if ('false' == 'true')
+                            $$('nav.navbar')[0].setStyle({ marginBottom: '0px' });</script>
+                </span>
+            </span>
+        </div>
+        <div class="form_body form-horizontal tabs_disabled">
+            <span class="tabs2_section tabs2_section_0 tabs2_section0 " data-header-only="false" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
+                <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="false" class="section ">
+                    <div id="x_178530_pid_project.section_header_spacer"></div>
+                    <div id="header_attachment">
+                        <div id="header_attachment_size_checker">
+                            <ul id="header_attachment_list" data-max-filename-length="100">
+                                <li class="attachment_list_items">
+                                    <a href="#" id="header_attachment_list_label" style="visibility:hidden; display:none;" class="attachment" onclick="javascript:saveAttachment('x_178530_pid_project', '841fa48cdb27430093eef11fbf961950');; return false;">
+                                        Manage Attachments (
+                                        <span id="attachmentNumber_-1" class="attachmentNumber_-1"></span>):
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="attachment_upload_progress"></div>
+                        </div>
+                        <div id="more_attachments">...</div>
+                    </div>
+                    <div id="header_attachment_line" style="display:none"></div>
+                    <script>
+                        addLoadEvent(function () {
+
+                            if (typeof AttachmentUploader !== "undefined") {
+                                AttachmentUploader.addDropZone(document.body, "1024",
+                                    "true", "true", "true", "");
+                            }
+                        });</script>
+                    <div id="output_messages" class="outputmsg_container" style="display:none">
+                        <h2 class="sr-only">Notifications</h2>
+                        <button class="btn btn-icon close icon-cross" onclick="GlideUI.get().clearOutputMessages(this); return false;">
+                            <span class="sr-only">Close Messages"</span>
+                        </button>
+                        <div class="outputmsg_div"></div>
+                    </div>
+                    <script>addRenderEvent(function () { CustomEvent.fire('glide_optics_inspect_update_watchfield', ''); });</script>
+                    <span class="ui_notification" data-type="action" data-text="" data-attr-sys_id="-1" data-attr-action="sysverb_new" data-attr-table="x_178530_pid_project"></span>
+                    <div id="9d98222edb83030093eef11fbf9619df" glide="true" class="section-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="element.x_178530_pid_project.u_date" class="form-group " style="">
+                                    <div class="" data-type="label" choice="0" type="date" id="label.x_178530_pid_project.u_date" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="u_date" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">                                            
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Date</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        
+                                        <input class="form-control disabled" id="u_date" value="" readonly="readonly" ng-model="" />
+                                        
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_region" class="form-group is-required" style="">
+                                    <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_region" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_project.u_region" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                           <span class="mandatory required-marker"></span>
+                                            <span title="" class="label-text" data-html="false">Region</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_region" name="sys_original.x_178530_pid_project.u_region"/>
+                                        </div>
+                                        <input type="hidden" id="x_178530_pid_project.u_region" name="x_178530_pid_project.u_region" onchange="onChange('x_178530_pid_project.u_region')" class=""/>
+                                        <input type="hidden" id="sys_display.original.x_178530_pid_project.u_region" name="sys_display.original.x_178530_pid_project.u_region" value=""/>
+                                        <div class="input-group ref-container ">
+                                            <input id="sys_display.x_178530_pid_project.u_region" name="sys_display.x_178530_pid_project.u_region" aria-labelledby="label.x_178530_pid_project.u_region" type="text" autocomplete="off" autocorrect="off" value="" data-type="ac_reference_input" data-completer="AJAXReferenceCompleter" data-dependent="null" data-ref-qual="" data-ref="x_178530_pid_project.u_region" data-ref-key="null" data-ref-dynamic="false" data-name="u_region" data-table="x_178530_pid_region" class="form-control element_reference_input" style="; " spellcheck="false" onfocus="if (!this.ac) addLoadEvent(function() {var e = gel('sys_display.x_178530_pid_project.u_region'); if (!e.ac) new AJAXReferenceCompleter(gel('sys_display.x_178530_pid_project.u_region'), 'x_178530_pid_project.u_region', 'null', ''); e.ac.onFocus();})" aria-required="true" role="combobox" aria-autocomplete="list" aria-owns="AC.x_178530_pid_project.u_region" aria-activedescendant="" aria-expanded="false" title="" aria-invalid="false" data-original-title=""/>
+                                            <span class="ref_dynamic_placeholder">A new record with this value will be created automatically</span>
+                                            <span class="input-group-btn">
+                                                <a id="lookup.x_178530_pid_project.u_region" name="lookup.x_178530_pid_project.u_region" class="btn btn-default" title="" aria-label="Lookup using list" data-for="sys_display.x_178530_pid_project.u_region" data-type="ac_reference_input" tabindex="-1" role="button" data-original-title="Lookup using list">
+                                                    <span class="icon icon-search" aria-hidden="true"></span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons">
+                                        <span name="x_178530_pid_project.u_region.ui_policy_sensitive">
+                                            <a id="view.x_178530_pid_project.u_region" name="view.x_178530_pid_project.u_region" style="display: none;" class="btn btn-default btn-ref icon icon-info" data-type="reference_popup" data-table="x_178530_pid_project" data-form="x_178530_pid_region.do" data-ref="x_178530_pid_project.u_region" data-ref-key="null" data-view="" tabindex="-1">
+                                                <span class="sr-only">View - Opens reference record in current window</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_address" class="form-group is-required" style="">
+                                    <div class="" data-type="label" choice="3" type="choice" id="label.x_178530_pid_project.u_address" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_address" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_address" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Address</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_address" name="sys_original.x_178530_pid_project.u_address" value="" />
+                                        </div>
+                                        <select aria-required="true" aria-labelledby="label.x_178530_pid_project.u_address" ng-non-bindable="true" name="x_178530_pid_project.u_address" id="x_178530_pid_project.u_address" onchange="onChange('x_178530_pid_project.u_address');" style="; " class="form-control  ">
+                                            <option value="">-- None --</option>
+                                            <option value="205 Uproad , Carrollton, Texas, 75002, United States">205 Uproad , Carrollton, Texas, 75002, United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_site_code" class="form-group " style="">
+                                    <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_site_code" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="sys_readonly.x_178530_pid_project.u_site_code" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_site_code" title="Field value has changed since last update" mandatory="false" oclass="read_only" class="changed label_description" aria-label="Field value has changed since last update" data-original-title="Field value has changed since last update"></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Site Code</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_site_code" name="sys_original.x_178530_pid_project.u_site_code" value="" />
+                                        </div>
+                                        <input style="; ; " class="form-control disabled " id="sys_readonly.x_178530_pid_project.u_site_code" value="" ng-non-bindable="" readonly="readonly" />
+                                        <input id="x_178530_pid_project.u_site_code" onchange="onChange('x_178530_pid_project.u_site_code');" name="x_178530_pid_project.u_site_code" value="" ng-non-bindable="" style="display:none;" writeaccess="false" aria-required="false" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_suite" class="form-group " style="">
+                                    <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_suite" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_suite" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_suite" title="" mandatory="false" oclass="" class=" required-marker" data-original-title=""></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Suite</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_suite" name="sys_original.x_178530_pid_project.u_suite" value="" />
+                                        </div>
+                                        <input type="text" id="x_178530_pid_project.u_suite" name="x_178530_pid_project.u_suite" aria-required="false" onchange="onChange('x_178530_pid_project.u_suite');" maxlength="100" value="" style="; " autocomplete="off" ng-non-bindable="" class="form-control " spellcheck="false" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_project_type" class="form-group is-required" style="">
+                                    <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_project_type" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_project.u_project_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_project_type" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Project Type</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_project_type" name="sys_original.x_178530_pid_project.u_project_type" />
+                                        </div>
+                                        <input type="hidden" id="x_178530_pid_project.u_project_type" name="x_178530_pid_project.u_project_type" onchange="onChange('x_178530_pid_project.u_project_type')" class="" />
+                                        <input type="hidden" id="sys_display.original.x_178530_pid_project.u_project_type" name="sys_display.original.x_178530_pid_project.u_project_type" value="" />
+                                        <div class="input-group ref-container ">
+                                            <input id="sys_display.x_178530_pid_project.u_project_type" name="sys_display.x_178530_pid_project.u_project_type" aria-labelledby="label.x_178530_pid_project.u_project_type" type="text" autocomplete="off" autocorrect="off" value="" data-type="ac_reference_input" data-completer="AJAXReferenceCompleter" data-dependent="null" data-ref-qual="" data-ref="x_178530_pid_project.u_project_type" data-ref-key="null" data-ref-dynamic="false" data-name="u_project_type" data-table="x_178530_pid_project_type" class="form-control element_reference_input  " style="; " spellcheck="false" onfocus="if (!this.ac) addLoadEvent(function() {var e = gel('sys_display.x_178530_pid_project.u_project_type'); if (!e.ac) new AJAXReferenceCompleter(gel('sys_display.x_178530_pid_project.u_project_type'), 'x_178530_pid_project.u_project_type', 'null', ''); e.ac.onFocus();})" aria-required="true" />
+                                            <span class="ref_dynamic_placeholder">A new record with this value will be created automatically</span>
+                                            <span class="input-group-btn">
+                                                <a id="lookup.x_178530_pid_project.u_project_type" name="lookup.x_178530_pid_project.u_project_type" class="btn btn-default" title="Lookup using list" aria-label="Lookup using list" data-for="sys_display.x_178530_pid_project.u_project_type" data-type="ac_reference_input" tabindex="-1" role="button" data-original-title="Lookup using list">
+                                                    <span class="icon icon-search" aria-hidden="true"></span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons">
+                                        <span name="x_178530_pid_project.u_project_type.ui_policy_sensitive">
+                                            <a id="view.x_178530_pid_project.u_project_type" name="view.x_178530_pid_project.u_project_type" style="display: none;" class="btn btn-default btn-ref icon icon-info" data-type="reference_popup" data-table="x_178530_pid_project" data-form="x_178530_pid_project_type.do" data-ref="x_178530_pid_project.u_project_type" data-ref-key="null" data-view="" tabindex="-1">
+                                                <span class="sr-only">View - Opens reference record in current window</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_product_type" class="form-group is-required" style="">
+                                    <div class="" data-type="label" choice="1" type="choice" id="label.x_178530_pid_project.u_product_type" nowrap="true">
+                                        <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_product_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_product_type" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Product Type</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                        <div ng-non-bindable="" class="hidden">
+                                            <input type="hidden" id="sys_original.x_178530_pid_project.u_product_type" name="sys_original.x_178530_pid_project.u_product_type" value="" />
+                                        </div>
+                                        <select aria-required="true" aria-labelledby="label.x_178530_pid_project.u_product_type" ng-non-bindable="true" name="x_178530_pid_project.u_product_type" id="x_178530_pid_project.u_product_type" onchange="onChange('x_178530_pid_project.u_product_type');" style="; " class="form-control  ">
+                                            <option value="">-- None --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <div id="element.x_178530_pid_project.u_project_name" class="form-group is-required" style="" ng-non-bindable="">
+                                    <div oncontextmenu="return elementAction(this, event)" choice="0" type="string" data-type="label" id="label.x_178530_pid_project.u_project_name">
+                                        <label onclick="return labelClicked(this, 'string');" for="x_178530_pid_project.u_project_name" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                            <span id="status.x_178530_pid_project.u_project_name" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
+                                            <span title="" class="label-text" data-html="false" data-original-title="">Project Name</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls" ng-non-bindable="">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                                                <span class=" label_right pull-right" style="">
+                                                    <script language="javascript">
+                                                        addLoadEvent(
+                                                            function () {
+                                                                if (window['textareaResize'])
+                                                                    textareaResize('x_178530_pid_project.u_project_name');
+                                                            }
+                                                        );</script>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <textarea id="x_178530_pid_project.u_project_name" onchange="this.isFocused=false;multiModified(this);" onkeydown="multiKeyDown(this);" style="width: 100%; overflow: hidden; word-wrap: break-word; resize: none;" name="x_178530_pid_project.u_project_name" wrap="soft" specialtype="" data-length="300" data-charlimit="false" onfocus="this.isFocused=true;" onblur="this.isFocused=false;" class="form-control" aria-required="true" spellcheck="false" aria-describedby="x_178530_pid_project.u_project_name_fieldmsg"></textarea>
+                                        <input type="hidden" id="sys_original.x_178530_pid_project.u_project_name" name="sys_original.x_178530_pid_project.u_project_name" value="" />
+                                        <script>
+                                            if (window.TextAreaElement) {
+                                                addRenderEvent(function () {
+                                                    if (typeof g_form != "undefined") {
+                                                        if (!g_form.elementHandlers['x_178530_pid_project.u_project_name']) {
+                                                            g_form.registerHandler('x_178530_pid_project.u_project_name', new TextAreaElement('x_178530_pid_project.u_project_name'));
+                                                        }
+                                                    }
+                                                });
+                                            }</script>
+                                        <div class="fieldmsg-container" id="x_178530_pid_project.u_project_name_fieldmsg" aria-live="polite">
+                                            <div class="fieldmsg notification notification-info">Purpose of a PID is to release master plan, consultant services to G-1 or G-2, preconstruction services and/or, long lead owner furnished equipment.</div>
+                                            <div class="fieldmsg notification notification-info">PIDs DO NOT release construction. Construction is released at Gate G-2 or if early release is required an approved LOI is required.</div>
+                                            <div class="fieldmsg notification notification-info">
+                                                As per our governance process, proof of project funding must be attached to the PID. PIDS without proof of funding or a copy of the ICM/DICM will be rejected.
+                                                Along with proof of funding, consultant proposals should also be attached to the PID.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons"></div>
+                                </div>
+                                <script type="text/javascript">var tiny_html_editor = true;</script>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </span>
+
+            
+        </div>
+        <div class="form_action_button_container">
+            <button class="form_action_button  action_context btn btn-default" style="white-space: nowrap" type="submit" value="sysverb_insert" onclick="return gsftSubmit(this);" id="sysverb_insert" data-action-name="sysverb_insert" gsft_id="42da42d00a0a0b340066377beb6dd099" name="not_important">Submit</button>
+        </div>
+    </div>
+</j:jelly>]]></html>
+        <name>Project Custom Form</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-03 12:31:07</sys_created_on>
+        <sys_id>443fbc77db5f030093eef11fbf9619b9</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Project Custom Form</sys_name>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_ui_page_443fbc77db5f030093eef11fbf9619b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-05 12:29:53</sys_updated_on>
+    </sys_ui_page>
+</record_update>

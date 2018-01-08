@@ -2,44 +2,44 @@
 <record_update>
     <sys_ui_section caption="" section_id="cb9cb343db03030093eef11fbf96191c" sys_domain="global" table="x_178530_pid_site" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_site_id_1</element>
+            <element>u_site_id</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>c9c04813db43030093eef11fbf9619e3</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>09d2b92fdb83030093eef11fbf96196d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_site_code_2</element>
+            <element>u_site_code</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>4dc04813db43030093eef11fbf9619e3</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>89d2b92fdb83030093eef11fbf96196d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_region_10</element>
+            <element>u_region</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>cdc04813db43030093eef11fbf9619e3</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>0dd2b92fdb83030093eef11fbf96196d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,55 +47,55 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>41c04813db43030093eef11fbf9619e4</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>8dd2b92fdb83030093eef11fbf96196d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_is_active_3</element>
+            <element>u_active</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>c1c04813db43030093eef11fbf9619e4</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>01d2b92fdb83030093eef11fbf96196e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_market_7</element>
+            <element>u_market</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>45c04813db43030093eef11fbf9619e4</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>81d2b92fdb83030093eef11fbf96196e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_property_type_11</element>
+            <element>u_property_type</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 07:45:48</sys_created_on>
-            <sys_id>c5c04813db43030093eef11fbf9619e4</sys_id>
+            <sys_created_on>2017-12-21 10:42:39</sys_created_on>
+            <sys_id>05d2b92fdb83030093eef11fbf96196e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_site" sys_domain="global" view="Default view">cb9cb343db03030093eef11fbf96191c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 07:45:48</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:42:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

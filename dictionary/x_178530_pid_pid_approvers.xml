@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_178530_pid_approvers" label="PID approvers" max_length="40" name="x_178530_pid_pid_approvers" type="collection">
+        <element label="Project ID" max_length="32" name="u_project_id" reference="x_178530_pid_project" type="reference"/>
+        <index name="index">
+            <element name="u_project_id"/>
+        </index>
+    </element>
+</database>

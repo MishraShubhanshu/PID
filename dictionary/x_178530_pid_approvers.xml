@@ -2,35 +2,20 @@
 <database>
     <element label="Approvers" max_length="40" name="x_178530_pid_approvers" type="collection">
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
-        <element default="true" label="Active" max_length="40" name="u_active_3" type="boolean"/>
-        <element label="Approver" max_length="32" name="u_approver_2" reference="sys_user" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Region" max_length="40" name="u_region_5" type="string">
-            <choice>
-                <element label="APAC" sequence="0" value="apac"/>
-                <element label="Central" sequence="1" value="central"/>
-                <element label="Europe" sequence="2" value="europe"/>
-                <element label="Midwest" sequence="3" value="midwest"/>
-                <element label="NorthEast" sequence="4" value="northeast"/>
-                <element label="NorthWest" sequence="5" value="northwest"/>
-                <element label="SouthEast" sequence="6" value="southeast"/>
-                <element label="SouthWest" sequence="7" value="southwest"/>
-                <element label="APAC - MP" sequence="8" value="apac - mp"/>
-                <element label="Central - MP" sequence="9" value="central - mp"/>
-                <element label="Europe - MP" sequence="10" value="europe - mp"/>
-                <element label="NorthEast - MP" sequence="11" value="northeast - mp"/>
-                <element label="NorthWest - MP" sequence="12" value="northwest - mp"/>
-                <element label="SouthEast - MP" sequence="13" value="southeast - mp"/>
-                <element label="SouthWest - MP" sequence="14" value="southwest - mp"/>
-            </choice>
-        </element>
-        <element label="Routing Order" max_length="40" name="u_routing_4" type="integer"/>
+        <element default="true" label="Is Active" max_length="40" name="u_active" type="boolean"/>
+        <element display="true" label="Approver" mandatory="true" max_length="32" name="u_approver" reference="sys_user" type="reference"/>
+        <element label="Approver Type" mandatory="true" max_length="32" name="u_approver_type" reference="x_178530_pid_approver_type" type="reference"/>
+        <element label="Region" mandatory="true" max_length="32" name="u_region" reference="x_178530_pid_region" type="reference"/>
+        <element label="Routing Order" mandatory="true" max_length="40" name="u_routing_order" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Title" mandatory="true" max_length="200" name="u_title" type="string"/>
-        <element label="Approver Type" mandatory="true" max_length="32" name="u_type_1" reference="x_178530_pid_approver_type" type="reference"/>
         <index name="index">
-            <element name="u_approver_2"/>
+            <element name="u_approver_type"/>
         </index>
         <index name="index2">
-            <element name="u_type_1"/>
+            <element name="u_approver"/>
+        </index>
+        <index name="index3">
+            <element name="u_region"/>
         </index>
     </element>
 </database>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_project_type</field>
+        <global>true</global>
+        <messages/>
+        <name>Project Type change script</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	//This part calls REST API and gets the data from Product Type table whose Project Type matched with the new value
+	
+	restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_product_type?u_project_type=" + newValue, function(response){
+		var records = response.result;
+		g_form.clearOptions('u_product_type');
+		records.forEach(function(item,index){
+			g_form.addOption('u_product_type', item.u_product_type, item.u_product_type);
+		});
+	});
+	
+	if( g_form.getValue('u_address') ==''){
+		g_form.setValue('u_project_name', '');
+		return;
+	}
+	restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_project_type?sys_id=" + newValue, function(response){
+		var siteInfo = JSON.parse(sessionStorage.getItem("SiteInfo"));
+		var address = siteInfo.u_physical_address_2 != ''? siteInfo.u_physical_address + siteInfo.u_physical_address_2 : siteInfo.u_physical_address;
+		var projectName = siteInfo.u_market != ''? siteInfo.u_market + " - " + address  + " - " + response.result[0].u_project_type : address + " - " + response.result[0].u_project_type;
+		g_form.setValue('u_project_name', projectName );	
+	});	
+	sessionStorage.getItem("SiteInfo");
+}
+   
+var restCall = function(requestURL, success){
+	var requestBody = "";
+	var client=new XMLHttpRequest();
+	client.open("get",requestURL);
+
+	client.setRequestHeader('Accept','application/json');
+	client.setRequestHeader('Content-Type','application/json');
+
+	//Eg. UserName="admin", Password="admin" for this code sample.
+	//client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Winter@17'));
+	
+	client.setRequestHeader('X-UserToken', 'window.g_ck');
+	
+	client.onreadystatechange = function() { 
+		if(this.readyState == this.DONE) {
+			//This calls the bindProduct() to bind the Product Type options
+			success(JSON.parse(this.response)); 
+		}
+	}; 
+	client.send(requestBody);
+};]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-26 10:17:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a5017c9db93030093eef11fbf961976</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Project Type change script</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_script_client_9a5017c9db93030093eef11fbf961976</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-27 06:57:17</sys_updated_on>
+        <table>x_178530_pid_project</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -2,44 +2,44 @@
 <record_update>
     <sys_ui_section caption="" section_id="b18ea787db03030093eef11fbf96190e" sys_domain="global" table="x_178530_pid_project_type" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_project_type_id_1</element>
+            <element>u_project_type_id</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 08:14:17</sys_created_on>
-            <sys_id>da478017db43030093eef11fbf961953</sys_id>
+            <sys_created_on>2017-12-21 10:10:43</sys_created_on>
+            <sys_id>e98b692bdb83030093eef11fbf9619d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_project_type" sys_domain="global" view="Default view">b18ea787db03030093eef11fbf96190e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 08:14:17</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_project_type_2</element>
+            <element>u_project_type</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 08:14:17</sys_created_on>
-            <sys_id>5e478017db43030093eef11fbf961953</sys_id>
+            <sys_created_on>2017-12-21 10:10:43</sys_created_on>
+            <sys_id>6d8b692bdb83030093eef11fbf9619d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_project_type" sys_domain="global" view="Default view">b18ea787db03030093eef11fbf96190e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 08:14:17</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_is_active_1</element>
+            <element>u_active</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-12-20 08:14:17</sys_created_on>
-            <sys_id>de478017db43030093eef11fbf961953</sys_id>
+            <sys_created_on>2017-12-21 10:10:43</sys_created_on>
+            <sys_id>ed8b692bdb83030093eef11fbf9619d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_178530_pid_project_type" sys_domain="global" view="Default view">b18ea787db03030093eef11fbf96190e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-12-20 08:14:17</sys_updated_on>
+            <sys_updated_on>2017-12-21 10:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

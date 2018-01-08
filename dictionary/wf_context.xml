@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="scope_master=workflow" label="Workflow context" max_length="40" name="wf_context" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Approver" max_length="40" name="x_178530_pid_approver" type="string"/>
+    </element>
+</database>
