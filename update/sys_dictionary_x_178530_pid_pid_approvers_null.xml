@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" extends="x_178530_pid_approvers" table="x_178530_pid_pid_approvers">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_178530_pid_pid_approvers">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>

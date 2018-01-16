@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="x_178530_pid_approvers" label="PID approvers" max_length="40" name="x_178530_pid_pid_approvers" type="collection">
-        <element label="Project ID" max_length="32" name="u_project_id" reference="x_178530_pid_project" type="reference"/>
+    <element label="PID approvers" max_length="40" name="x_178530_pid_pid_approvers" type="collection">
+        <element label="Approver" max_length="32" name="u_approver" reference="sys_user" type="reference"/>
+        <element display="true" label="Project ID" max_length="32" name="u_project_id" reference="x_178530_pid_project" type="reference"/>
+        <element label="Region" max_length="32" name="u_region" reference="x_178530_pid_region" type="reference"/>
+        <element label="Routing Order" max_length="40" name="u_routing_order" type="integer"/>
+        <element label="Title" max_length="40" name="u_title" type="string"/>
         <index name="index">
+            <element name="u_approver"/>
+        </index>
+        <index name="index2">
             <element name="u_project_id"/>
+        </index>
+        <index name="index3">
+            <element name="u_region"/>
         </index>
     </element>
 </database>

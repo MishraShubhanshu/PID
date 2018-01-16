@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Project" max_length="40" name="x_178530_pid_project" type="collection">
+        <element label="Is Approver Added" max_length="40" name="is_approver_added" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="3" label="Address" mandatory="true" max_length="1000" name="u_address" type="string">
             <choice>
                 <element label="205 Uproad , Carrollton, Texas, 75002, United States" value="205 Uproad , Carrollton, Texas, 75002, United States"/>
             </choice>
         </element>
         <element label="On Capital Plan" max_length="40" name="u_capital_plan" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" label="Comments" mandatory="true" max_length="2000" name="u_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="2000" name="u_comments" type="string"/>
         <element label="Date" max_length="40" name="u_date" read_only="true" type="glide_date"/>
         <element label="On Equipment Forecast" max_length="40" name="u_equipment_forecast" type="boolean"/>
         <element label="PID Status" max_length="100" name="u_pid_status" read_only="true" type="string"/>
@@ -17,13 +18,13 @@
         <element attributes="edge_encryption_enabled=true" display="true" label="Project Name" mandatory="true" max_length="300" name="u_project_name" type="string"/>
         <element label="Project Type" mandatory="true" max_length="32" name="u_project_type" reference="x_178530_pid_project_type" type="reference"/>
         <element label="Region" mandatory="true" max_length="32" name="u_region" reference="x_178530_pid_region" type="reference"/>
-        <element label="Requested Budget" mandatory="true" max_length="40" name="u_requested_budget" type="float"/>
-        <element attributes="edge_encryption_enabled=true" label="Scope/Task" mandatory="true" max_length="2000" name="u_scope" type="string"/>
-        <element label="Service Type" mandatory="true" max_length="32" name="u_service_type" reference="x_178530_pid_service_type" type="reference"/>
+        <element label="Requested Budget" max_length="40" name="u_requested_budget" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Scope/Task" max_length="2000" name="u_scope" type="string"/>
+        <element label="Service Type" max_length="32" name="u_service_type" reference="x_178530_pid_service_type" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Site Code" max_length="20" name="u_site_code" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Suite" max_length="100" name="u_suite" type="string"/>
-        <element label="Target Date" mandatory="true" max_length="40" name="u_target_date" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Target Gate" mandatory="true" max_length="40" name="u_target_gate" type="string">
+        <element label="Target Date" max_length="40" name="u_target_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Target Gate" max_length="40" name="u_target_gate" type="string">
             <choice>
                 <element label="G-0" sequence="0" value="g-0"/>
                 <element label="G-1" sequence="1" value="g-1"/>

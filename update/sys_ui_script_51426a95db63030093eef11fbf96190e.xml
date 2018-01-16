@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Client-side logic for Angular App</description>
+        <global>false</global>
+        <name>x_178530_pid.angular_app_client_logic</name>
+        <script><![CDATA[var PIDApp = angular.module('PIDApp', []);
+
+PIDApp.filter('range', function () {
+    return function (input, min, max) {
+        min = parseInt(min); //Make string input int
+        max = parseInt(max) + 1;
+        for (var i = min; i < max; i++)
+            input.push(i);
+        return input;
+    };
+});
+
+PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
+
+    $scope.model = {};
+    $scope.model.siteInfos = [];
+    $scope.model.productTypes = [];
+    $scope.model.regions = [];
+    $scope.model.projectTypes = [];
+    $scope.model.approvers = [];
+    $scope.model.address = {};
+    $scope.model.siteCode = "TBD";
+    $scope.model.projectName = '';
+    $scope.model.showApproverList = false;
+    $scope.model.showApproverForm = false;
+
+    var bindAddress = function (response) {
+        $scope.model.siteInfos.length = 0;
+        $scope.model.address = null;
+        $scope.model.siteCode = "TBD";
+        $scope.model.projectName = '';
+
+        $scope.model.siteInfos = response.result;
+
+        //g_form.clearOptions('u_address');
+        $scope.model.siteInfos.forEach(function (item, index) {
+            var address = item.u_physical_address_2 != '' ? item.u_physical_address + item.u_physical_address_2 : item.u_physical_address;
+            item.completeAddress = address + ", " + item.u_city + ", " + item.u_state + ", " + item.u_postal_code + ", " + item.u_country;
+        });
+        $scope.$apply();
+    };
+
+    var getSiteInfo = function (value) {
+        //var siteInfos = JSON.parse(sessionStorage.getItem("SiteInfos"));
+        var currentSiteInfo = {};
+        $scope.model.siteInfos.forEach(function (item, index) {
+            var address = item.u_physical_address_2 != '' ? item.u_physical_address + item.u_physical_address_2 : item.u_physical_address;
+            var completeAddress = address + ", " + item.u_city + ", " + item.u_state + ", " + item.u_postal_code + ", " + item.u_country;
+            if (value == completeAddress) {
+                currentSiteInfo = item;
+            }
+        });
+        return currentSiteInfo;
+    };
+
+    var restCall = function (requestURL, success) {
+        showLoading();
+        var requestBody = "";
+        var client = new XMLHttpRequest();
+        client.open("get", requestURL);
+
+        client.setRequestHeader('Accept', 'application/json');
+        client.setRequestHeader('Content-Type', 'application/json');
+
+        //Eg. UserName="admin", Password="admin" for this code sample.
+        //client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Winter@17'));
+
+        client.setRequestHeader('X-UserToken', 'window.g_ck');
+
+        client.onreadystatechange = function () {
+            if (this.readyState == this.DONE) {
+                //This calls the bindProduct() to bind the Product Type options
+                success(JSON.parse(this.response));
+                hideLoading();
+            }
+        };
+        client.send(requestBody);
+    };
+
+    var postData = function (requestURL, data, method, success) {
+        showLoading();
+        var requestBody = JSON.stringify(data);
+        var client = new XMLHttpRequest();
+        client.open(method, requestURL);
+
+        client.setRequestHeader('Accept', 'application/json');
+        client.setRequestHeader('Content-Type', 'application/json');
+
+        //Eg. UserName="admin", Password="admin" for this code sample.
+        //client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Winter@17'));
+
+        client.setRequestHeader('X-UserToken', 'window.g_ck');
+
+        client.onreadystatechange = function () {
+            if (this.readyState == this.DONE) {
+                //This calls the bindProduct() to bind the Product Type options
+                success(JSON.parse(this.response));
+                hideLoading();
+            }
+        };
+        client.send(requestBody);
+    };
+
+    var init = function () {
+        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_region", function (response) {
+            $scope.model.regions = response.result;
+            $scope.$apply();
+        });
+        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_project_type", function (response) {
+            $scope.model.projectTypes = response.result;
+        });
+
+        $scope.date = new Date();
+        $scope.model.siteCode = "TBD";
+    };
+
+    $scope.onRegionChange = function () {
+        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_site?u_region=" + $scope.model.region.sys_id, bindAddress);
+    };
+
+    $scope.onAddressChange = function () {
+        if ($scope.model.address === '') {
+            $scope.model.siteCode = "TBD";
+            $scope.model.projectName = '';
+            return;
+        }
+        $scope.model.siteCode = $scope.model.address.u_site_code;
+        var address = $scope.model.address.u_physical_address_2 != '' ? $scope.model.address.u_physical_address + $scope.model.address.u_physical_address_2 : $scope.model.address.u_physical_address;
+        var projectName = $scope.model.address.u_market != '' ? $scope.model.address.u_market + " - " + address : address;
+
+        if ($scope.model.projectType) {
+            projectName = projectName + " - " + $scope.model.projectType.u_project_type;
+        }
+
+        $scope.model.projectName = projectName;
+    };
+
+    $scope.onProjectChange = function () {
+        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_product_type?u_project_type=" + $scope.model.projectType.sys_id, function (response) {
+            $scope.model.productTypes.length = 0;
+            $scope.model.productTypes = response.result;
+            $scope.$apply();
+        });
+        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_approvers?sysparm_display_value=all&u_region=" + $scope.model.region.sys_id, function (response) {
+            response.result.forEach(function (item, index) {
+                item.routing = parseInt(item.u_routing_order.value);
+            });
+            $scope.model.approvers = response.result;
+            $scope.model.showApproverList = true;
+            $scope.$apply();
+        });
+        if ($scope.model.address.u_site_code) {
+            $scope.model.siteCode = $scope.model.address.u_site_code;
+            var address = $scope.model.address.u_physical_address_2 != '' ? $scope.model.address.u_physical_address + $scope.model.address.u_physical_address_2 : $scope.model.address.u_physical_address;
+            var projectName = $scope.model.address.u_market != '' ? $scope.model.address.u_market + " - " + address : address;
+            $scope.model.projectName = projectName + " - " + $scope.model.projectType.u_project_type;
+        }
+    };
+
+    $scope.setApprover = function (element) {
+        $scope.model.approver = document.getElementById(element).getAttribute('value');
+    };
+
+    $scope.showAddApproverForm = function () {
+        $scope.model.showApproverForm = true;
+    };
+
+    $scope.addApprover = function (element) {
+        var approver = document.getElementById(element).getAttribute('value');
+        restCall("https://dev37198.service-now.com/api/now/table/sys_user/" + approver, function (response) {
+            var approverDetails = {
+                u_approver: {
+                    value: approver,
+                    display_value: response.result.name
+                },
+                u_title: {
+                    value: response.result.title,
+                    display_value: response.result.title
+                },
+                u_region: {
+                    value: $scope.model.region.sys_id,
+                    display_value: $scope.model.region.u_region_name
+                },
+                u_routing: {
+                    value: $scope.model.approvers.length + 1,
+                    display_value: $scope.model.approvers.length + 1
+                }
+            };
+            $scope.model.approvers.push(approverDetails);
+            $scope.model.showApproverForm = false;
+            $scope.$apply();
+        });
+    };
+
+    $scope.submitPID = function () {
+        var pid = {
+            u_date: $scope.date,
+            u_region: $scope.model.region.sys_id,
+            u_address: $scope.model.address.completeAddress,
+            u_site_code: $scope.model.siteCode,
+            u_suite: $scope.model.suite,
+            u_project_type: $scope.model.projectType.sys_id,
+            u_product_type: $scope.model.productType.sys_id,
+            u_project_name: $scope.model.projectName
+        };
+        postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_project", pid, "POST", function (response) {
+            var project = response.result;
+
+            $scope.model.approvers.forEach(function (item, index) {
+                var pidApprover = {
+                    u_approver: item.u_approver.value,
+                    u_title: item.u_title.value,
+                    u_region: item.u_region.value,
+                    u_routing_order: item.routing,
+                    u_project_id: project.sys_id
+                };
+                postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_pid_approvers", pidApprover, "POST", function (pidApproversResponse) {
+                    var approvers = pidApproversResponse.result;
+                    var pidUpdate = {
+                        is_approver_added: true
+                    };
+                    if ((index + 1) == $scope.model.approvers.length) {
+                        postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_project/" + project.sys_id, pidUpdate, "PUT", function (updateResponse) {
+                            alert("PID request created");
+                            window.location = "https://dev37198.service-now.com/x_178530_pid_project_list.do?sysparm_userpref_module=c8a56a2edb83030093eef11fbf961906";
+                        });
+                    }
+                });
+            });
+        });
+    };
+    init();
+}]);
+]]></script>
+        <script_name>angular_app_client_logic</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-08 11:00:49</sys_created_on>
+        <sys_id>51426a95db63030093eef11fbf96190e</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name>x_178530_pid.angular_app_client_logic</sys_name>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_ui_script_51426a95db63030093eef11fbf96190e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-16 09:33:47</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

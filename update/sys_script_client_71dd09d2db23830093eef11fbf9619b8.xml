@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>is_approver_added</field>
+        <global>true</global>
+        <messages/>
+        <name>Initiate Approver workflow</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+  if (isLoading || newValue =='true') {
+	 
+var updateOwner = new GlideRecord('wf_workflow');
+updateOwner.addQuery('name', 'Approver Workflow');
+updateOwner.query();
+if (updateOwner.next()) {
+   var wf = new Workflow();
+   var workflowId = '' + updateOwner.sys_id;
+   var vars = {};
+   wf.startFlow(workflowId,sys_id);
+  
+}
+}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-11 09:03:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71dd09d2db23830093eef11fbf9619b8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Initiate Approver workflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_script_client_71dd09d2db23830093eef11fbf9619b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-11 10:23:53</sys_updated_on>
+        <table>x_178530_pid_project</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
