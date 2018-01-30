@@ -36,8 +36,11 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         $scope.model.address = null;
         $scope.model.siteCode = "TBD";
         $scope.model.projectName = '';
+        $scope.model.projectType = {};
+        $scope.model.approvers = [];
 
         $scope.model.siteInfos = response.result;
+
 
         //g_form.clearOptions('u_address');
         $scope.model.siteInfos.forEach(function (item, index) {
@@ -109,12 +112,15 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
     };
 
     var init = function () {
-        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_region", function (response) {
+        restCall("/api/now/table/x_178530_pid_region", function (response) {
             $scope.model.regions = response.result;
             $scope.$apply();
         });
-        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_project_type", function (response) {
+        restCall("/api/now/table/x_178530_pid_project_type", function (response) {
             $scope.model.projectTypes = response.result;
+        });
+        restCall("/api/now/table/x_178530_pid_project?sysparm_limit=1&sysparm_query=ORDERBYDESCsys_created_on", function (response) {
+            $scope.model.pidNumber = response.result.length && response.result[0].u_pid_number ? parseInt(response.result[0].u_pid_number) + 1 : 1;
         });
 
         $scope.date = new Date();
@@ -122,7 +128,7 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
     };
 
     $scope.onRegionChange = function () {
-        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_site?u_region=" + $scope.model.region.sys_id, bindAddress);
+        restCall("/api/now/table/x_178530_pid_site?u_region=" + $scope.model.region.sys_id, bindAddress);
     };
 
     $scope.onAddressChange = function () {
@@ -143,12 +149,14 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
     };
 
     $scope.onProjectChange = function () {
-        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_product_type?u_project_type=" + $scope.model.projectType.sys_id, function (response) {
+        restCall("/api/now/table/x_178530_pid_product_type?u_project_type=" + $scope.model.projectType.sys_id, function (response) {
             $scope.model.productTypes.length = 0;
             $scope.model.productTypes = response.result;
             $scope.$apply();
         });
-        restCall("https://dev37198.service-now.com/api/now/table/x_178530_pid_approvers?sysparm_display_value=all&u_region=" + $scope.model.region.sys_id, function (response) {
+
+        var urlSuffix = $scope.model.projectType.u_project_type == "Master Plan" ? "u_region=" + $scope.model.region.sys_id + "&u_master_plan=true" : "u_region=" + $scope.model.region.sys_id;
+        restCall("/api/now/table/x_178530_pid_approvers?sysparm_display_value=all&" + urlSuffix, function (response) {
             response.result.forEach(function (item, index) {
                 item.routing = parseInt(item.u_routing_order.value);
             });
@@ -172,31 +180,52 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         $scope.model.showApproverForm = true;
     };
 
+    $scope.removeApprover = function (approver) {
+        var index = $scope.model.approvers.indexOf(approver);
+        $scope.model.approvers.splice(index, 1);
+    };
+
+    $scope.closeAddApproverForm = function () {
+        $scope.model.showApproverForm = false;
+    };
+
     $scope.addApprover = function (element) {
         var approver = document.getElementById(element).getAttribute('value');
-        restCall("https://dev37198.service-now.com/api/now/table/sys_user/" + approver, function (response) {
-            var approverDetails = {
-                u_approver: {
-                    value: approver,
-                    display_value: response.result.name
-                },
-                u_title: {
-                    value: response.result.title,
-                    display_value: response.result.title
-                },
-                u_region: {
-                    value: $scope.model.region.sys_id,
-                    display_value: $scope.model.region.u_region_name
-                },
-                u_routing: {
-                    value: $scope.model.approvers.length + 1,
-                    display_value: $scope.model.approvers.length + 1
-                }
-            };
-            $scope.model.approvers.push(approverDetails);
-            $scope.model.showApproverForm = false;
-            $scope.$apply();
-        });
+        if (approver) {
+            var duplicateApprovers = jQuery.grep($scope.model.approvers, function (b) { return b.u_approver.value == approver });
+            if (duplicateApprovers.length == 0) {
+                restCall("/api/now/table/sys_user/" + approver, function (response) {
+                    var approverDetails = {
+                        u_approver: {
+                            value: approver,
+                            display_value: response.result.name
+                        },
+                        u_title: {
+                            value: response.result.title,
+                            display_value: response.result.title
+                        },
+                        u_region: {
+                            value: $scope.model.region.sys_id,
+                            display_value: $scope.model.region.u_region_name
+                        },
+                        u_routing: {
+                            value: $scope.model.approvers.length + 1,
+                            display_value: $scope.model.approvers.length + 1
+                        },
+                        routing: $scope.model.approvers.length + 1
+                    };
+                    $scope.model.approvers.push(approverDetails);
+                    $scope.model.showApproverForm = false;
+                    $scope.$apply();
+                });
+            } else {
+                alert("Duplicate users are not allowed. Please enter another user.");                
+            }
+            document.getElementById("x_178530_pid_pid_approvers.u_approver").value = "";
+            document.getElementById("sys_display.x_178530_pid_pid_approvers.u_approver").value = "";
+        } else {
+            alert("Please enter a user");
+        }
     };
 
     $scope.submitPID = function () {
@@ -207,12 +236,15 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
             u_site_code: $scope.model.siteCode,
             u_suite: $scope.model.suite,
             u_project_type: $scope.model.projectType.sys_id,
-            u_product_type: $scope.model.productType.sys_id,
-            u_project_name: $scope.model.projectName
+            u_product_type: $scope.model.productType.u_product_type,
+            u_project_name: $scope.model.projectName,
+            u_pid_number: $scope.model.pidNumber
         };
-        postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_project", pid, "POST", function (response) {
+        postData("/api/now/table/x_178530_pid_project", pid, "POST", function (response) {
             var project = response.result;
-
+            var approverNames = "Approvers Level: 1 \n";
+            var approverLevel = 1;
+            $scope.model.approvers.sort(function (a, b) { return (a.routing > b.routing) ? 1 : ((b.routing > a.routing) ? -1 : 0); });
             $scope.model.approvers.forEach(function (item, index) {
                 var pidApprover = {
                     u_approver: item.u_approver.value,
@@ -221,15 +253,22 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
                     u_routing_order: item.routing,
                     u_project_id: project.sys_id
                 };
-                postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_pid_approvers", pidApprover, "POST", function (pidApproversResponse) {
+                if (approverLevel == item.routing) {
+                    approverNames += item.u_approver.display_value + "\n";
+                } else {
+                    approverLevel = item.routing;
+                    approverNames += "\n Approvers Level: " + item.routing + " \n" + item.u_approver.display_value + "\n";
+                }
+                postData("/api/now/table/x_178530_pid_pid_approvers", pidApprover, "POST", function (pidApproversResponse) {
                     var approvers = pidApproversResponse.result;
                     var pidUpdate = {
-                        is_approver_added: true
+                        is_approver_added: true,
+                        u_approvers: approverNames
                     };
                     if ((index + 1) == $scope.model.approvers.length) {
-                        postData("https://dev37198.service-now.com/api/now/table/x_178530_pid_project/" + project.sys_id, pidUpdate, "PUT", function (updateResponse) {
+                        postData("/api/now/table/x_178530_pid_project/" + project.sys_id, pidUpdate, "PUT", function (updateResponse) {
                             alert("PID request created");
-                            window.location = "https://dev37198.service-now.com/x_178530_pid_project_list.do?sysparm_userpref_module=c8a56a2edb83030093eef11fbf961906";
+                            window.location = "/x_178530_pid_project_list.do?sysparm_userpref_module=c8a56a2edb83030093eef11fbf961906";
                         });
                     }
                 });
@@ -244,14 +283,14 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-08 11:00:49</sys_created_on>
         <sys_id>51426a95db63030093eef11fbf96190e</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>x_178530_pid.angular_app_client_logic</sys_name>
         <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
         <sys_policy/>
         <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
         <sys_update_name>sys_ui_script_51426a95db63030093eef11fbf96190e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-16 09:33:47</sys_updated_on>
+        <sys_updated_on>2018-01-29 13:23:22</sys_updated_on>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>

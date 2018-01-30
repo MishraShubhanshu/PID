@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="u_product_type" table="x_178530_pid_project">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="approval" table="x_178530_pid_project">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -15,7 +15,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Product Type</column_label>
+        <column_label>Approval</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -28,14 +28,14 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>u_product_type</element>
+        <element>approval</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
-        <mandatory>true</mandatory>
-        <max_length>100</max_length>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
         <name>x_178530_pid_project</name>
         <next_element/>
         <primary>false</primary>
@@ -53,16 +53,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-01-25 09:44:59</sys_created_on>
-        <sys_id>130575fadb37030093eef11fbf96197c</sys_id>
+        <sys_created_on>2018-01-18 12:54:59</sys_created_on>
+        <sys_id>a72d522cdbf3030093eef11fbf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Product Type</sys_name>
+        <sys_name>Approval</sys_name>
         <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
         <sys_policy/>
         <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
-        <sys_update_name>sys_dictionary_x_178530_pid_project_u_product_type</sys_update_name>
+        <sys_update_name>sys_dictionary_x_178530_pid_project_approval</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-25 09:44:59</sys_updated_on>
+        <sys_updated_on>2018-01-18 12:54:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

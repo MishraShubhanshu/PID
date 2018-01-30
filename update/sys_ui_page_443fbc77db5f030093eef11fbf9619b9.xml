@@ -13,271 +13,277 @@
     <script src="x_178530_pid.angular_app_client_logic.jsdbx"></script>
 
     <div class="form-horizontal" ng-app="PIDApp" ng-controller="PIDFormCtrl">
-        <div id="x_178530_pid_project.form_header" class="section_header_div_no_scroll form_title" data-form-title="Project">
+        <form name="PIDForm">
+            <div id="x_178530_pid_project.form_header" class="section_header_div_no_scroll form_title" data-form-title="Project">
 
-            <span class="tabs2_section tabs2_section_0 tabs2_section0 " data-header-only="true" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
-                <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="true" class="section ">
-                    <nav class="navbar navbar-default section_zero" data-type="section_head" data-id="9d98222edb83030093eef11fbf9619df">
-                        <div class="container-fluid">
-                            <div class="navbar-header">
-                                <h2 class="form_header navbar-title">Custom Form</h2>
-                            </div>
-                            <div class="navbar-right">
-                                <span id="section_head_right.9d98222edb83030093eef11fbf9619df" style="display: ;">
-                                    <button onclick="saveAttachment('x_178530_pid_project', 'b72dec88db27430093eef11fbf961961');" id="header_add_attachment" title="Manage Attachments" aria-label="Manage Attachments" class="btn btn-icon icon-paperclip navbar-btn" data-original-title="Manage Attachments"></button>
+                <span class="tabs2_section tabs2_section_0 tabs2_section0 " data-header-only="true" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
+                    <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="true" class="section ">
+                        <nav class="navbar navbar-default section_zero" data-type="section_head" data-id="9d98222edb83030093eef11fbf9619df">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <h2 class="form_header navbar-title">New PID Form</h2>
+                                </div>
+                                <!--<div class="navbar-right">
+                                    <span id="section_head_right.9d98222edb83030093eef11fbf9619df" style="display: ;">
+                                        <button onclick="saveAttachment('x_178530_pid_project', 'b72dec88db27430093eef11fbf961961');" id="header_add_attachment" title="Manage Attachments" aria-label="Manage Attachments" class="btn btn-icon icon-paperclip navbar-btn" data-original-title="Manage Attachments"></button>
 
-                                    <span class="ui_action_container_primary">
-                                        <span class="navbar_ui_actions">
-                                            <button class="form_action_button header  action_context btn btn-default" style="white-space: nowrap" type="submit" value="sysverb_insert" onclick="return gsftSubmit(this);" id="sysverb_insert" data-action-name="sysverb_insert" gsft_id="42da42d00a0a0b340066377beb6dd099" name="not_important">Submit</button>
+                                        <span class="ui_action_container_primary">
+                                            <span class="navbar_ui_actions">
+                                                <button class="form_action_button header  action_context btn btn-default" style="white-space: nowrap" type="submit" value="sysverb_insert" onclick="return gsftSubmit(this);" id="sysverb_insert" data-action-name="sysverb_insert" gsft_id="42da42d00a0a0b340066377beb6dd099" name="not_important">Submit</button>
+                                            </span>
                                         </span>
                                     </span>
-                                </span>
-                                <span></span>
+                                </div>-->
                             </div>
-                        </div>
 
-                    </nav>
-                    <script>
-                        if ('false' == 'true')
-                            $$('nav.navbar')[0].setStyle({ marginBottom: '0px' });</script>
+                        </nav>
+                        <script>
+                            if ('false' == 'true')
+                                $$('nav.navbar')[0].setStyle({ marginBottom: '0px' });</script>
+                    </span>
                 </span>
-            </span>
-        </div>
-        <div class="form_body form-horizontal tabs_disabled">
-            <span class="tabs2_section tabs2_section_0 tabs2_section0 col-xs-10 col-md-9 col-lg-8" data-header-only="false" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
-                <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="false" class="section ">
-                    <div id="x_178530_pid_project.section_header_spacer"></div>
-                    <div id="header_attachment">
-                        <div id="header_attachment_size_checker">
-                            <ul id="header_attachment_list" data-max-filename-length="100">
-                                <li class="attachment_list_items">
-                                    <a href="#" id="header_attachment_list_label" style="visibility:hidden; display:none;" class="attachment" onclick="javascript:saveAttachment('x_178530_pid_project', '841fa48cdb27430093eef11fbf961950');; return false;">
-                                        Manage Attachments (
-                                        <span id="attachmentNumber_-1" class="attachmentNumber_-1"></span>):
-                                    </a>
-                                </li>
-                            </ul>
-                            <div id="attachment_upload_progress"></div>
+            </div>
+            <div class="form_body form-horizontal tabs_disabled">
+                <span class="tabs2_section tabs2_section_0 tabs2_section0 col-xs-10 col-md-9 col-lg-8" data-header-only="false" tab_caption="Project" tab_caption_raw="" id="section_tab.9d98222edb83030093eef11fbf9619df" data-section-id="9d98222edb83030093eef11fbf9619df">
+                    <span id="section-9d98222edb83030093eef11fbf9619df" data-header-only="false" class="section ">
+                        <div id="x_178530_pid_project.section_header_spacer"></div>
+                        <div id="header_attachment">
+                            <div id="header_attachment_size_checker">
+                                <ul id="header_attachment_list" data-max-filename-length="100">
+                                    <li class="attachment_list_items">
+                                        <a href="#" id="header_attachment_list_label" style="visibility:hidden; display:none;" class="attachment" onclick="javascript:saveAttachment('x_178530_pid_project', '841fa48cdb27430093eef11fbf961950');; return false;">
+                                            Manage Attachments (
+                                            <span id="attachmentNumber_-1" class="attachmentNumber_-1"></span>):
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="attachment_upload_progress"></div>
+                            </div>
+                            <div id="more_attachments">...</div>
                         </div>
-                        <div id="more_attachments">...</div>
-                    </div>
-                    <div id="header_attachment_line" style="display:none"></div>
-                    <script>
-                        addLoadEvent(function () {
+                        <div id="header_attachment_line" style="display:none"></div>
+                        <script>
+                            addLoadEvent(function () {
 
-                            if (typeof AttachmentUploader !== "undefined") {
-                                AttachmentUploader.addDropZone(document.body, "1024",
-                                    "true", "true", "true", "");
-                            }
-                        });</script>
-                    <div id="output_messages" class="outputmsg_container" style="display:none">
-                        <h2 class="sr-only">Notifications</h2>
-                        <button class="btn btn-icon close icon-cross" onclick="GlideUI.get().clearOutputMessages(this); return false;">
-                            <span class="sr-only">Close Messages"</span>
-                        </button>
-                        <div class="outputmsg_div"></div>
-                    </div>
-                    <script>addRenderEvent(function () { CustomEvent.fire('glide_optics_inspect_update_watchfield', ''); });</script>
-                    <span class="ui_notification" data-type="action" data-text="" data-attr-sys_id="-1" data-attr-action="sysverb_new" data-attr-table="x_178530_pid_project"></span>
-                    <div id="9d98222edb83030093eef11fbf9619df" glide="true" class="section-content">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div id="element.x_178530_pid_project.u_date" class="form-group " style="">
-                                    <div class="" data-type="label" choice="0" type="date" id="label.x_178530_pid_project.u_date" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="u_date" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Date</span>
-                                        </label>
+                                if (typeof AttachmentUploader !== "undefined") {
+                                    AttachmentUploader.addDropZone(document.body, "1024",
+                                        "true", "true", "true", "");
+                                }
+                            });</script>
+                        <div id="output_messages" class="outputmsg_container" style="display:none">
+                            <h2 class="sr-only">Notifications</h2>
+                            <button class="btn btn-icon close icon-cross" onclick="GlideUI.get().clearOutputMessages(this); return false;">
+                                <span class="sr-only">Close Messages"</span>
+                            </button>
+                            <div class="outputmsg_div"></div>
+                        </div>
+                        <script>addRenderEvent(function () { CustomEvent.fire('glide_optics_inspect_update_watchfield', ''); });</script>
+                        <span class="ui_notification" data-type="action" data-text="" data-attr-sys_id="-1" data-attr-action="sysverb_new" data-attr-table="x_178530_pid_project"></span>
+                        <div id="9d98222edb83030093eef11fbf9619df" glide="true" class="section-content">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div id="element.x_178530_pid_project.u_date" class="form-group " style="">
+                                        <div class="" data-type="label" choice="0" type="date" id="label.x_178530_pid_project.u_date" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="u_date" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Date</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                            <input class="form-control disabled" id="u_date" value="{{ date | date:'dd/MM/yyyy' }}" readonly="readonly" />
+                                        </div>
                                     </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                                        <input class="form-control disabled" id="u_date" value="{{ date | date:'dd/MM/yyyy' }}" readonly="readonly" />
+                                    <div id="element.x_178530_pid_project.u_region" class="form-group is-required" style="">
+                                        <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_region" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="u_region" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span class="mandatory required-marker"></span>
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Region</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                            <select name="u_region" id="u_region" ng-change="onRegionChange();" class="form-control" required="required" ng-model="model.region">
+                                                <option value="null">-- None --</option>
+                                                <option ng-repeat="region in model.regions" ng-value="region">{{region.u_region_name}}</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_region" class="form-group is-required" style="">
-                                    <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_region" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="u_region" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span class="mandatory required-marker"></span>
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Region</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                                        <select name="u_region" id="u_region" ng-change="onRegionChange();" class="form-control  " ng-model="model.region">
-                                            <option value="null">-- None --</option>
-                                            <option ng-repeat="region in model.regions" ng-value="region">{{region.u_region_name}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_address" class="form-group is-required" style="">
-                                    <div class="" data-type="label" choice="3" type="choice" id="label.x_178530_pid_project.u_address" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="u_address" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span class="mandatory required-marker"></span>
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Address</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                    <div id="element.x_178530_pid_project.u_address" class="form-group is-required" style="">
+                                        <div class="" data-type="label" choice="3" type="choice" id="label.x_178530_pid_project.u_address" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="u_address" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span class="mandatory required-marker"></span>
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Address</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
 
-                                        <select aria-required="true" aria-labelledby="label.x_178530_pid_project.u_address" name="u_address" id="u_address" ng-change="onAddressChange();" class="form-control  " ng-model="model.address">
-                                            <option value="">-- None --</option>
-                                            <option ng-repeat="siteInfo in model.siteInfos" ng-value="siteInfo">{{siteInfo.completeAddress}}</option>
-                                        </select>
+                                            <select aria-required="true" aria-labelledby="label.x_178530_pid_project.u_address" name="u_address" id="u_address" required="required" ng-change="onAddressChange();" class="form-control  " ng-model="model.address">
+                                                <option value="">-- None --</option>
+                                                <option ng-repeat="siteInfo in model.siteInfos" ng-value="siteInfo">{{siteInfo.completeAddress}}</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_site_code" class="form-group " style="">
-                                    <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_site_code" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="sys_readonly.x_178530_pid_project.u_site_code" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span title="" class="label-text">Site Code</span>
-                                        </label>
+                                    <div id="element.x_178530_pid_project.u_site_code" class="form-group " style="">
+                                        <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_site_code" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="sys_readonly.x_178530_pid_project.u_site_code" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span title="" class="label-text">Site Code</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                            <input class="form-control disabled" id="x_178530_pid_project.u_site_code" value="" readonly="readonly" ng-model="model.siteCode" />
+                                        </div>
                                     </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                                        <input class="form-control disabled" id="x_178530_pid_project.u_site_code" value="" readonly="readonly" ng-model="model.siteCode" />
+                                    <div id="element.x_178530_pid_project.u_suite" class="form-group " style="">
+                                        <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_suite" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_suite" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Suite</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                            <input type="text" id="x_178530_pid_project.u_suite" name="x_178530_pid_project.u_suite" aria-required="false" maxlength="100" value="" style="; " autocomplete="off" class="form-control " spellcheck="false" ng-model="model.suite" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_suite" class="form-group " style="">
-                                    <div class="" data-type="label" choice="0" type="string" id="label.x_178530_pid_project.u_suite" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_suite" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Suite</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                                        <input type="text" id="x_178530_pid_project.u_suite" name="x_178530_pid_project.u_suite" aria-required="false" maxlength="100" value="" style="; " autocomplete="off" class="form-control " spellcheck="false" ng-model="model.suite" />
-                                    </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_project_type" class="form-group is-required" style="">
-                                    <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_project_type" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_project.u_project_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span id="status.x_178530_pid_project.u_project_type" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Project Type</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                                        <select name="u_project_type" id="u_project_type" ng-change="onProjectChange();" class="form-control  " ng-model="model.projectType">
-                                            <option value="">-- None --</option>
-                                            <option ng-repeat="projectType in model.projectTypes" ng-value="projectType">{{projectType.u_project_type}}</option>
-                                        </select>
-                                    </div>
+                                    <div id="element.x_178530_pid_project.u_project_type" class="form-group is-required" style="">
+                                        <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_project.u_project_type" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_project.u_project_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span id="status.x_178530_pid_project.u_project_type" title="" mandatory="true" oclass="mandatory" class="mandatory required-marker" data-original-title=""></span>
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Project Type</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                            <select name="u_project_type" id="u_project_type" ng-change="onProjectChange();" required="required" class="form-control  " ng-model="model.projectType">
+                                                <option value="">-- None --</option>
+                                                <option ng-repeat="projectType in model.projectTypes" ng-value="projectType">{{projectType.u_project_type}}</option>
+                                            </select>
+                                        </div>
 
-                                </div>
-                                <div id="element.x_178530_pid_project.u_product_type" class="form-group is-required" style="">
-                                    <div class="" data-type="label" choice="1" type="choice" id="label.x_178530_pid_project.u_product_type" nowrap="true">
-                                        <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_product_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span class="mandatory required-marker"></span>
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Product Type</span>
-                                        </label>
                                     </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                    <div id="element.x_178530_pid_project.u_product_type" class="form-group is-required" style="">
+                                        <div class="" data-type="label" choice="1" type="choice" id="label.x_178530_pid_project.u_product_type" nowrap="true">
+                                            <label onclick="return labelClicked(this);" for="x_178530_pid_project.u_product_type" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span class="mandatory required-marker"></span>
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Product Type</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
 
-                                        <select aria-required="true" aria-labelledby="label.x_178530_pid_product.u_product_type" name="x_178530_pid_product.u_product_type" id="x_178530_pid_project.u_product_type" class="form-control" ng-model="model.productType">
-                                            <option value="">-- None --</option>
-                                            <option ng-repeat="productType in model.productTypes" ng-value="productType">{{productType.u_product_type}}</option>
-                                        </select>
+                                            <select aria-required="true" aria-labelledby="label.x_178530_pid_product.u_product_type" required="required" name="x_178530_pid_product.u_product_type" id="x_178530_pid_project.u_product_type" class="form-control" ng-model="model.productType">
+                                                <option value="">-- None --</option>
+                                                <option ng-repeat="productType in model.productTypes" ng-value="productType">{{productType.u_product_type}}</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="element.x_178530_pid_project.u_project_name" class="form-group is-required" style="">
-                                    <div oncontextmenu="return elementAction(this, event)" choice="0" type="string" data-type="label" id="label.x_178530_pid_project.u_project_name">
-                                        <label onclick="return labelClicked(this, 'string');" for="x_178530_pid_project.u_project_name" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                            <span class="mandatory required-marker"></span>
-                                            <span title="" class="label-text" data-html="false" data-original-title="">Project Name</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                    <div id="element.x_178530_pid_project.u_project_name" class="form-group is-required" style="">
+                                        <div oncontextmenu="return elementAction(this, event)" choice="0" type="string" data-type="label" id="label.x_178530_pid_project.u_project_name">
+                                            <label onclick="return labelClicked(this, 'string');" for="x_178530_pid_project.u_project_name" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                                <span class="mandatory required-marker"></span>
+                                                <span title="" class="label-text" data-html="false" data-original-title="">Project Name</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
 
-                                        <input type="text" class="form-control " id="sys_original.x_178530_pid_project.u_project_name" name="sys_original.x_178530_pid_project.u_project_name" value="" ng-model="model.projectName" />
+                                            <input type="text" class="form-control " id="sys_original.x_178530_pid_project.u_project_name" name="sys_original.x_178530_pid_project.u_project_name" value="" ng-model="model.projectName" />
 
-                                        <div class="fieldmsg-container" id="x_178530_pid_project.u_project_name_fieldmsg" aria-live="polite">
-                                            <div class="fieldmsg notification notification-info">Purpose of a PID is to release master plan, consultant services to G-1 or G-2, preconstruction services and/or, long lead owner furnished equipment.</div>
-                                            <div class="fieldmsg notification notification-info">PIDs DO NOT release construction. Construction is released at Gate G-2 or if early release is required an approved LOI is required.</div>
-                                            <div class="fieldmsg notification notification-info">
-                                                As per our governance process, proof of project funding must be attached to the PID. PIDS without proof of funding or a copy of the ICM/DICM will be rejected.
-                                                Along with proof of funding, consultant proposals should also be attached to the PID.
+                                            <div class="fieldmsg-container" id="x_178530_pid_project.u_project_name_fieldmsg" aria-live="polite">
+                                                <div class="fieldmsg notification notification-info">Purpose of a PID is to release master plan, consultant services to G-1 or G-2, preconstruction services and/or, long lead owner furnished equipment.</div>
+                                                <div class="fieldmsg notification notification-info">PIDs DO NOT release construction. Construction is released at Gate G-2 or if early release is required an approved LOI is required.</div>
+                                                <div class="fieldmsg notification notification-info">
+                                                    As per our governance process, proof of project funding must be attached to the PID. PIDS without proof of funding or a copy of the ICM/DICM will be rejected.
+                                                    Along with proof of funding, consultant proposals should also be attached to the PID.
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <script type="text/javascript">var tiny_html_editor = true;</script>
                                 </div>
-                                <script type="text/javascript">var tiny_html_editor = true;</script>
                             </div>
                         </div>
-                    </div>
+                    </span>
                 </span>
-            </span>
-            <div ng-show="model.showApproverList" class="col-xs-2 col-md-3 col-lg-4" style="padding-top: 1%;">
-                <nav class="navbar navbar-default section_secondary" data-type="section_head" data-id="1742af09dbd3030093eef11fbf9619da">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <h3 class="form_header">PID Approvers</h3>
-                        </div>
-                    </div>
-                </nav>
-                <table class="data_list_table list_table table">
-                    <thead>
-                        <tr>
-                            <th>Approver</th>
-                            <th>Designation</th>
-                            <th>Routing</th>
-                            <th>Region</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="approver in model.approvers">
-                            <td>
-                                {{approver.u_approver.display_value}}
-                            </td>
-
-                            <td>
-                                {{approver.u_title.value}}
-                            </td>
-                            <td>
-                                <select ng-model="approver.routing" ng-options="n for n in [] | range:1:model.approvers.length"></select>
-                            </td>
-                            <td>
-                                {{approver.u_region.display_value}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button id="addApproverForm" type="button" ng-click="showAddApproverForm()" class="form_action_button  action_context btn btn-default">New Approver +</button>
-
-
-                <div ng-show="model.showApproverForm">
-                    
-                    <div id="element.x_178530_pid_pid_approvers.u_approver" class="form-group is-required" style="">
-                        <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_pid_approvers.u_approver" nowrap="true">
-                            <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_pid_approvers.u_approver" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
-                                <span id="status.x_178530_pid_pid_approvers.u_approver" title="" mandatory="true" oclass="mandatory" class="required-marker label_description" data-original-title="Mandatory - must be populated before Submit" aria-label=""></span>
-                                <span title="" class="label-text" data-html="false" data-original-title="">Approver</span>
-                            </label>
-                        </div>
-                        <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
-                            <div ng-non-bindable="" class="hidden">
-                                <input type="hidden" id="sys_original.x_178530_pid_pid_approvers.u_approver" name="sys_original.x_178530_pid_pid_approvers.u_approver" />
+                <div ng-show="model.showApproverList" class="col-xs-2 col-md-3 col-lg-4" style="padding-top: 1%;">
+                    <nav class="navbar navbar-default section_secondary" data-type="section_head" data-id="1742af09dbd3030093eef11fbf9619da">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <h3 class="form_header">PID Approvers</h3>
                             </div>
-                            <input type="hidden" id="x_178530_pid_pid_approvers.u_approver" name="x_178530_pid_pid_approvers.u_approver" onchange="onChange('x_178530_pid_pid_approvers.u_approver')" class="" value="" aria-required="true" />
-                            <input type="hidden" id="sys_display.original.x_178530_pid_pid_approvers.u_approver" name="sys_display.original.x_178530_pid_pid_approvers.u_approver" value="" />
-                            <div class="input-group ref-container ">
-                                <input id="sys_display.x_178530_pid_pid_approvers.u_approver" name="sys_display.x_178530_pid_pid_approvers.u_approver" aria-labelledby="label.x_178530_pid_pid_approvers.u_approver" type="text" autocomplete="off" autocorrect="off" value="" ac_columns="email" ac_order_by="name" data-type="ac_reference_input" data-completer="AJAXTableCompleter" data-dependent="null" data-ref-qual="" data-ref="x_178530_pid_pid_approvers.u_approver" data-ref-key="null" data-ref-dynamic="false" data-name="u_approver" data-table="sys_user" class="form-control element_reference_input" style="; " spellcheck="false" onfocus="if (!this.ac) addLoadEvent(function() {var e = gel('sys_display.x_178530_pid_pid_approvers.u_approver'); if (!e.ac) new AJAXTableCompleter(gel('sys_display.x_178530_pid_pid_approvers.u_approver'), 'x_178530_pid_pid_approvers.u_approver', 'null', ''); e.ac.onFocus();})" aria-required="true" role="combobox" aria-autocomplete="list" aria-owns="AC.x_178530_pid_pid_approvers.u_approver" aria-activedescendant="ac_option_5a826bf03710200044e0bfc8bcbe5dba" title="" aria-invalid="false" data-original-title="" aria-expanded="false" />
-                                <span class="ref_dynamic_placeholder">A new record with this value will be created automatically</span>
-                                <span class="input-group-btn">
-                                    <a id="lookup.x_178530_pid_pid_approvers.u_approver" name="lookup.x_178530_pid_pid_approvers.u_approver" class="btn btn-default" title="" aria-label="Lookup using list" data-for="sys_display.x_178530_pid_pid_approvers.u_approver" data-type="ac_reference_input" tabindex="-1" role="button" data-original-title="Lookup using list">
-                                        <span class="icon icon-search" aria-hidden="true"></span>
+                        </div>
+                    </nav>
+                    <table class="data_list_table list_table table">
+                        <thead>
+                            <tr>
+                                <th>Approver</th>
+                                <th>Designation</th>
+                                <th>Routing</th>
+                                <th>Region</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="approver in model.approvers">
+                                <td>
+                                    {{approver.u_approver.display_value}}
+                                </td>
+
+                                <td>
+                                    {{approver.u_title.value}}
+                                </td>
+                                <td>
+                                    <select ng-model="approver.routing" required="required" ng-options="n for n in [] | range:1:model.approvers.length"></select>
+                                </td>
+                                <td>
+                                    {{approver.u_region.display_value}}
+                                </td>
+                                <td>
+                                    <button class="btn icon-cross" ng-click="removeApprover(approver)"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="addApproverForm" type="button" ng-click="showAddApproverForm()" class="form_action_button  action_context btn btn-default">New Approver +</button>
+
+
+                    <div ng-show="model.showApproverForm" class="new-approver">
+                        <button class="btn btn-icon close icon-cross" ng-click="closeAddApproverForm()">
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <div id="element.x_178530_pid_pid_approvers.u_approver" class="form-group is-required" style="">
+                            <div class="" data-type="label" choice="0" type="reference" id="label.x_178530_pid_pid_approvers.u_approver" nowrap="true">
+                                <label onclick="return labelClicked(this);" for="sys_display.x_178530_pid_pid_approvers.u_approver" dir="ltr" class=" col-xs-12 col-md-1_5 col-lg-2 control-label">
+                                    <span id="status.x_178530_pid_pid_approvers.u_approver" title="" mandatory="true" oclass="mandatory" class="required-marker label_description" data-original-title="Mandatory - must be populated before Submit" aria-label=""></span>
+                                    <span title="" class="label-text" data-html="false" data-original-title="">Approver</span>
+                                </label>
+                            </div>
+                            <div class="col-xs-10 col-md-9 col-lg-8 form-field input_controls">
+                                <div ng-non-bindable="" class="hidden">
+                                    <input type="hidden" id="sys_original.x_178530_pid_pid_approvers.u_approver" name="sys_original.x_178530_pid_pid_approvers.u_approver" />
+                                </div>
+                                <input type="hidden" id="x_178530_pid_pid_approvers.u_approver" name="x_178530_pid_pid_approvers.u_approver" onchange="onChange('x_178530_pid_pid_approvers.u_approver')" class="" value="" aria-required="true" />
+                                <input type="hidden" id="sys_display.original.x_178530_pid_pid_approvers.u_approver" name="sys_display.original.x_178530_pid_pid_approvers.u_approver" value="" />
+                                <div class="input-group ref-container ">
+                                    <input id="sys_display.x_178530_pid_pid_approvers.u_approver" name="sys_display.x_178530_pid_pid_approvers.u_approver" aria-labelledby="label.x_178530_pid_pid_approvers.u_approver" type="text" autocomplete="off" autocorrect="off" value="" ac_columns="email" ac_order_by="name" data-type="ac_reference_input" data-completer="AJAXTableCompleter" data-dependent="null" data-ref-qual="" data-ref="x_178530_pid_pid_approvers.u_approver" data-ref-key="null" data-ref-dynamic="false" data-name="u_approver" data-table="sys_user" class="form-control element_reference_input" style="; " spellcheck="false" onfocus="if (!this.ac) addLoadEvent(function() {var e = gel('sys_display.x_178530_pid_pid_approvers.u_approver'); if (!e.ac) new AJAXTableCompleter(gel('sys_display.x_178530_pid_pid_approvers.u_approver'), 'x_178530_pid_pid_approvers.u_approver', 'null', ''); e.ac.onFocus();})" aria-required="true" role="combobox" aria-autocomplete="list" aria-owns="AC.x_178530_pid_pid_approvers.u_approver" aria-activedescendant="ac_option_5a826bf03710200044e0bfc8bcbe5dba" title="" aria-invalid="false" data-original-title="" aria-expanded="false" />
+                                    <span class="ref_dynamic_placeholder">A new record with this value will be created automatically</span>
+                                    <span class="input-group-btn">
+                                        <a id="lookup.x_178530_pid_pid_approvers.u_approver" name="lookup.x_178530_pid_pid_approvers.u_approver" class="btn btn-default" title="" aria-label="Lookup using list" data-for="sys_display.x_178530_pid_pid_approvers.u_approver" data-type="ac_reference_input" tabindex="-1" role="button" data-original-title="Lookup using list">
+                                            <span class="icon icon-search" aria-hidden="true"></span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons">
+                                <span name="x_178530_pid_pid_approvers.u_approver.ui_policy_sensitive">
+                                    <a id="view.x_178530_pid_pid_approvers.u_approver" name="view.x_178530_pid_pid_approvers.u_approver" style="display: none; visibility: hidden;" class="btn btn-default btn-ref icon icon-info" data-type="reference_popup" data-table="x_178530_pid_pid_approvers" data-form="sys_user.do" data-ref="x_178530_pid_pid_approvers.u_approver" data-ref-key="null" data-view="" tabindex="-1" aria-expanded="false">
+                                        <span class="sr-only">View - Opens reference record in current window</span>
                                     </a>
                                 </span>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-md-1_5 col-lg-2 form-field-addons">
-                            <span name="x_178530_pid_pid_approvers.u_approver.ui_policy_sensitive">
-                                <a id="view.x_178530_pid_pid_approvers.u_approver" name="view.x_178530_pid_pid_approvers.u_approver" style="display: none; visibility: hidden;" class="btn btn-default btn-ref icon icon-info" data-type="reference_popup" data-table="x_178530_pid_pid_approvers" data-form="sys_user.do" data-ref="x_178530_pid_pid_approvers.u_approver" data-ref-key="null" data-view="" tabindex="-1" aria-expanded="false">
-                                    <span class="sr-only">View - Opens reference record in current window</span>
-                                </a>
-                            </span>
-                        </div>
+                        <button id="addApprover" type="button" ng-click="addApprover('x_178530_pid_pid_approvers.u_approver')" class="form_action_button  action_context btn btn-default">Add+</button>
                     </div>
-                    <button id="addApprover" type="button" ng-click="addApprover('x_178530_pid_pid_approvers.u_approver')" class="form_action_button  action_context btn btn-default">Add+</button>
                 </div>
-            </div>
 
-        </div>
-        <div class="form_action_button_container col-lg-12 col-xs-12 col-md-12">
-            <button class="form_action_button  action_context btn btn-default" style="white-space: nowrap" type="submit" ng-click="submitPID()" id="sysverb_insert">Submit</button>
-        </div>
+            </div>
+            <div class="form_action_button_container col-lg-12 col-xs-12 col-md-12">
+                <button class="form_action_button  action_context btn btn-default" ng-disabled="PIDForm.$invalid" style="white-space: nowrap" type="submit" ng-click="submitPID()" id="sysverb_insert">Submit</button>
+            </div>
+        </form>
     </div>
 
 </j:jelly>]]></html>
@@ -287,13 +293,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-03 12:31:07</sys_created_on>
         <sys_id>443fbc77db5f030093eef11fbf9619b9</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>102</sys_mod_count>
         <sys_name>Project Custom Form</sys_name>
         <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
         <sys_policy/>
         <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
         <sys_update_name>sys_ui_page_443fbc77db5f030093eef11fbf9619b9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-16 09:48:30</sys_updated_on>
+        <sys_updated_on>2018-01-29 12:57:17</sys_updated_on>
     </sys_ui_page>
 </record_update>

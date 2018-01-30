@@ -4,6 +4,7 @@
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element default="true" label="Is Active" max_length="40" name="u_active" type="boolean"/>
         <element display="true" label="Approver" mandatory="true" max_length="32" name="u_approver" reference="sys_user" type="reference"/>
+        <element label="Is Master Plan" max_length="40" name="u_master_plan" type="boolean"/>
         <element label="Region" mandatory="true" max_length="32" name="u_region" reference="x_178530_pid_region" type="reference"/>
         <element label="Routing Order" mandatory="true" max_length="40" name="u_routing_order" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Title" mandatory="true" max_length="200" name="u_title" type="string"/>
