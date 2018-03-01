@@ -10,8 +10,8 @@
 PIDApp.filter('range', function () {
     return function (input, min, max) {
         min = parseInt(min); //Make string input int
-        max = parseInt(max) + 1;
-        for (var i = min; i < max; i++)
+        max = parseInt(max) + 1 > 6 ? 6 : parseInt(max) + 1;
+        for (var i = min; i <= max; i++)
             input.push(i);
         return input;
     };
@@ -75,7 +75,7 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         //Eg. UserName="admin", Password="admin" for this code sample.
         //client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Winter@17'));
 
-        client.setRequestHeader('X-UserToken', 'window.g_ck');
+        client.setRequestHeader('X-UserToken', window.g_ck);
 
         client.onreadystatechange = function () {
             if (this.readyState == this.DONE) {
@@ -99,7 +99,7 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         //Eg. UserName="admin", Password="admin" for this code sample.
         //client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Winter@17'));
 
-        client.setRequestHeader('X-UserToken', 'window.g_ck');
+        client.setRequestHeader('X-UserToken', window.g_ck);
 
         client.onreadystatechange = function () {
             if (this.readyState == this.DONE) {
@@ -283,14 +283,14 @@ PIDApp.controller("PIDFormCtrl", ['$scope', function ($scope) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-08 11:00:49</sys_created_on>
         <sys_id>51426a95db63030093eef11fbf96190e</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name>x_178530_pid.angular_app_client_logic</sys_name>
         <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
         <sys_policy/>
         <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
         <sys_update_name>sys_ui_script_51426a95db63030093eef11fbf96190e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-29 13:23:22</sys_updated_on>
+        <sys_updated_on>2018-01-31 16:55:11</sys_updated_on>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>

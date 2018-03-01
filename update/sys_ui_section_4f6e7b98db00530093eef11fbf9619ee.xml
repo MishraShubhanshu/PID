@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Custom Stage" section_id="4f6e7b98db00530093eef11fbf9619ee" sys_domain="global" table="sys_db_view" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>327ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.sys_db_view.sys_metadata_delete_related.sys_parent</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>b67ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_on</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>3a7ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>REL.sys_db_view.REL:b9edf0ca0a0a0b010035de2d6b579a03</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>ba7ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>REL.sys_db_view.REL:b5596613bf1021000ba9dc2ecf0739c5</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>3e7ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>plural</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>be7ef398db00530093eef11fbf96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_updated_by</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:19</sys_created_on>
+            <sys_id>327ef398db00530093eef11fbf96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Custom Stage" display_value="Custom Stage" name="sys_db_view" sys_domain="global" view="Default view">4f6e7b98db00530093eef11fbf9619ee</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Custom Stage</caption>
+            <header>false</header>
+            <name>sys_db_view</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-30 11:35:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4f6e7b98db00530093eef11fbf9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Custom Stage</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+            <sys_update_name>sys_ui_section_4f6e7b98db00530093eef11fbf9619ee</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-30 11:35:04</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

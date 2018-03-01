@@ -2,14 +2,14 @@
 <database>
     <element label="Project" max_length="40" name="x_178530_pid_project" type="collection">
         <element label="Approval" max_length="40" name="approval" type="string"/>
-        <element attributes="no_truncate=true" label="Approval History" max_length="4000" name="approval_history" type="string"/>
+        <element attributes="no_truncate=false" label="Approval History" max_length="4000" name="approval_history" type="string"/>
         <element label="Is Approver Added" max_length="40" name="is_approver_added" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="3" label="Address" mandatory="true" max_length="1000" name="u_address" type="string">
             <choice>
                 <element label="205 Uproad , Carrollton, Texas, 75002, United States" value="205 Uproad , Carrollton, Texas, 75002, United States"/>
             </choice>
         </element>
-        <element attributes="no_truncate=true" label="Approvers" max_length="500" name="u_approvers" type="string"/>
+        <element attributes="no_truncate=false" label="Approvers" max_length="500" name="u_approvers" type="string"/>
         <element label="On Capital Plan" max_length="40" name="u_capital_plan" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Comments" max_length="2000" name="u_comments" type="string"/>
         <element label="Date" max_length="40" name="u_date" read_only="true" type="glide_date"/>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_db_view">
+    <sys_db_view action="INSERT_OR_UPDATE">
+        <description>created to show the PID requests and approval records in one place</description>
+        <label>Approval View</label>
+        <name>x_178530_pid_approval_view</name>
+        <plural>Approval Views</plural>
+        <sys_class_name>sys_db_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-30 12:47:26</sys_created_on>
+        <sys_id>afce4068db40530093eef11fbf961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_178530_pid_approval_view</sys_name>
+        <sys_package display_value="PID" source="x_178530_pid">f1d311a2db03030093eef11fbf961991</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PID">f1d311a2db03030093eef11fbf961991</sys_scope>
+        <sys_update_name>sys_db_view_afce4068db40530093eef11fbf961912</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-30 12:47:26</sys_updated_on>
+    </sys_db_view>
+</record_update>

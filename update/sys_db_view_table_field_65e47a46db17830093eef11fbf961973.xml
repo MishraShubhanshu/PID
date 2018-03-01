@@ -15,6 +15,6 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-12-29 09:56:20</sys_updated_on>
         <table>x_178530_pid_project</table>
-        <view_table display_value="x_178530_pid_project">c2443646db17830093eef11fbf96197c</view_table>
+        <view_table/>
     </sys_db_view_table_field>
 </record_update>
